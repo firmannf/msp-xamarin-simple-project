@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Just_a_Movie.Views.DetailPage"
+             Title="Movie Detail">
+    <StackLayout Orientation="Vertical" Padding="16">
+        <Image x:Name="imagePoster" Source="{Binding ImageUrl}" Aspect="AspectFit" HorizontalOptions="Center"/>
+        
+        <Label x:Name="labelTitle"
+               Text="{Binding Title}"
+               TextColor="#E91E63"
+               HorizontalOptions="Center"
+               FontAttributes="Bold"
+               FontSize="14"/>
+
+        <Label x:Name="labelCategory"
+               Text="{Binding Category}"            
+               TextColor="#212121"
+               HorizontalOptions="Center"
+               FontSize="12"/>
+
+        <Label x:Name="labelDescription"
+               Text="{Binding Description}"   
+               Margin="0, 8, 0, 0"
+               TextColor="#212121"
+               FontSize="12"/>
+    </StackLayout>
+</ContentPage>

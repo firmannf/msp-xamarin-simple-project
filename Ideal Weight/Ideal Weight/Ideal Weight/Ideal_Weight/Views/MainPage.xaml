@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Ideal_Weight"
+             x:Class="Ideal_Weight.MainPage"
+             Title="Ideal Weight">
+
+    <StackLayout Orientation="Vertical" Padding="16">
+        <Label Text="Height"
+               TextColor="#E91E63"
+               FontAttributes="Bold"
+               FontSize="14"/>
+        
+        <Entry x:Name="entryHeight"
+               Placeholder="Enter your height (CM)"
+               Keyboard="Numeric"/>
+        
+        <Label Text="Weight"
+               TextColor="#E91E63"
+               FontAttributes="Bold"
+               FontSize="14"/>
+        
+        <Entry x:Name="entryWeight"
+               Placeholder="Enter your weight (KG)"
+               Keyboard="Numeric"/>
+
+        <Button x:Name="buttonCalculateManIdealWeight"
+                Text="Calculate Man's Ideal Weight"/>
+
+        <Button x:Name="buttonCalculateWomanIdealWeight"
+                Text="Calculate Woman's Ideal Weight"/>
+
+        <Label Text="Ideal Weight (Brocha)"
+               TextColor="#E91E63"
+               FontAttributes="Bold"
+               FontSize="14"/>
+
+        <Label x:Name="labelBrocha"
+               Text="-"
+               TextColor="#212121"
+               Margin="0, 0, 0, 4"
+               FontSize="14"/>
+
+        <Label Text="BMI"
+               TextColor="#E91E63"
+               FontAttributes="Bold"
+               FontSize="14"/>
+
+        <Label x:Name="labelBMI"   
+               Text="-"            
+               TextColor="#212121"
+               Margin="0, 0, 0, 4"
+               FontSize="14"/>
+            
+        <Label Text="Conclusion"
+               TextColor="#E91E63"
+               FontAttributes="Bold"
+               FontSize="14"/>
+
+        <Label x:Name="labelConclusion"
+               Text="-"
+               TextColor="#212121"
+               FontSize="14"/>
+    </StackLayout>
+
+</ContentPage>

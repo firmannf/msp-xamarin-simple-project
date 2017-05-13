@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Just_A_Transaction"
+             x:Class="Just_A_Transaction.Views.MainPage"
+             Title="Just A Transaction">
+
+    <ListView x:Name="listViewTransaction" HasUnevenRows="false" Header="Header Value" Footer="Footer" ItemSelected="OnSelection" >
+        <ListView.HeaderTemplate>
+            <DataTemplate>
+                <Grid BackgroundColor="#00796B" Padding="5,5,5,5" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Column="0" Text="Transaction" FontSize="Medium" FontAttributes="Bold" TextColor="White"/>
+                    <Label Grid.Column="1" Text="Amount" FontSize="Medium" FontAttributes="Bold" TextColor="White"/>
+                    <Label Grid.Column="2" Text="Date" FontSize="Medium" FontAttributes="Bold" TextColor="White"/>
+                </Grid>
+            </DataTemplate>
+        </ListView.HeaderTemplate>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal" Padding="5,5,5,5">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Label Grid.Column="0" Text="{Binding TransactionName}" FontSize="12" />
+                            <Label Grid.Column="1" Text="{Binding TransactionAmount}" FontSize="12" />
+                            <Label Grid.Column="2" Text="{Binding TransactionDate}" FontSize="12" />
+                        </Grid>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+        <ListView.FooterTemplate>
+            <DataTemplate>
+                <StackLayout Orientation="Horizontal" Padding="5,5,5,5" HorizontalOptions="CenterAndExpand">
+                    <Button Text="Add New Transaction" Clicked="OnNewClicked" />
+                </StackLayout>
+            </DataTemplate>
+        </ListView.FooterTemplate>
+    </ListView>
+
+</ContentPage>

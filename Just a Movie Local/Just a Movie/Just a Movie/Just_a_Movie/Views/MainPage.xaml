@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Just_a_Movie"
+             x:Class="Just_a_Movie.Views.MainPage"
+             Title="Just a Movie">
+
+    <ListView x:Name="listView" HasUnevenRows="True" ItemsSource="{Binding Movies}" ItemSelected="OnMoviesItemSelected">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal" Padding="16">
+                        <Image Source="{Binding ImageUrl}" HeightRequest="64" VerticalOptions="CenterAndExpand"/>
+                        <StackLayout Orientation="Vertical" Padding="16" VerticalOptions="CenterAndExpand">
+                            <Label Text="{Binding Title}"
+                               TextColor="#E91E63"
+                               FontAttributes="Bold"
+                               FontSize="14"/>
+
+                            <Label Text="{Binding Category}"            
+                               TextColor="#212121"
+                               FontSize="12"/>
+                        </StackLayout>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

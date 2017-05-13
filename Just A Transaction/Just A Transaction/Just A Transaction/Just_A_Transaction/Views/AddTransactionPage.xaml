@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Just_A_Transaction.Views.AddTransactionPage"
+             Title="New Transaction">
+
+    <StackLayout Orientation="Vertical" Padding="16">
+        <Label Text="Name"
+               TextColor="#009688"
+               FontAttributes="Bold"
+               FontSize="14"/>
+
+        <Entry x:Name="entryTransactionName"
+               Placeholder="Enter Transaction Name"
+               Keyboard="Text"/>
+
+        <Label Text="Amount"
+               TextColor="#009688"
+               FontAttributes="Bold"
+               FontSize="14"/>
+
+        <Entry x:Name="entryTransactionAmount"
+               Placeholder="Enter Transaction Amount"
+               Keyboard="Numeric"/>
+
+        <Label Text="Date"
+               TextColor="#009688"
+               FontAttributes="Bold"
+               FontSize="14"/>
+
+        <DatePicker x:Name="datePickerTransactionDate">
+            <DatePicker.Format>dd MMM yyyy</DatePicker.Format>
+        </DatePicker>
+
+        <Label Text="Info"
+               TextColor="#009688"
+               FontAttributes="Bold"
+               FontSize="14"/>
+
+        <Entry x:Name="entryTransactionInfo"
+               Placeholder="Enter Transaction Info"
+               Keyboard="Text"/>
+
+        <Button Text="Save" Clicked="OnSaveClicked" />
+    </StackLayout>
+
+</ContentPage>

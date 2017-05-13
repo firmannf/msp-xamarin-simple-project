@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Just_A_Transaction.Views.ShowTransactionPage"
+             Title="Transaction Detail">
+
+    <StackLayout Orientation="Vertical" Padding="16">
+        <Label Text="Name"
+               TextColor="#009688"
+               FontAttributes="Bold"
+               FontSize="14"/>
+
+        <Label Text="{Binding TransactionName}"            
+               TextColor="#212121"
+               Margin="0, 0, 0, 4"
+               FontSize="14"/>
+
+        <Label Text="Amount"
+               TextColor="#009688"
+               FontAttributes="Bold"
+               FontSize="14"/>
+
+        <Label Text="{Binding TransactionAmount}"            
+               TextColor="#212121"
+               Margin="0, 0, 0, 4"
+               FontSize="14"/>
+
+        <Label Text="Date"
+               TextColor="#009688"
+               FontAttributes="Bold"
+               FontSize="14"/>
+
+        <Label Text="{Binding TransactionDate}"            
+               TextColor="#212121"
+               Margin="0, 0, 0, 4"
+               FontSize="14"/>
+
+        <Label Text="Info"
+               TextColor="#009688"
+               FontAttributes="Bold"
+               FontSize="14"/>
+
+        <Label Text="{Binding TransactionInfo}"            
+               TextColor="#212121"
+               Margin="0, 0, 0, 4"
+               FontSize="14"/>
+
+        <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+            <Button Text="Edit" Clicked="OnEditClicked" />
+            <Button Text="Delete" Clicked="OnDeleteClicked" />
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
